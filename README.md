@@ -4,7 +4,7 @@ Simple Log Viewer for Laravel
 [![Packagist](https://img.shields.io/packagist/v/moritiza/laralog.svg)](https://packagist.org/packages/moritiza/laralog)
 [![Packagist](https://img.shields.io/packagist/l/moritiza/laralog.svg)](https://packagist.org/packages/moritiza/laralog)
 [![Packagist](https://img.shields.io/packagist/dm/moritiza/laralog.svg)](https://packagist.org/packages/moritiza/laralog)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/moritiza/laralog/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/moritiza/laralog/?branch=master)
+[![Author](https://img.shields.io/badge/author-@mortezanasiri-blue.svg)](https://mortezanasiri.github.io)
 
 # Install
 Install via composer
