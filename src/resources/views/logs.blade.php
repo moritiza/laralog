@@ -328,7 +328,7 @@
                                 <div class="card-footer">
                                     {{ $paginatedSingleLogs->links() }}
                                 </div>
-                            @elseif (count($dailyLogs[$currentLog]) > 5)
+                            @elseif (isset($dailyLogs[$currentLog]) && count($dailyLogs[$currentLog]) > 5)
                                 <div class="card-footer">
                                     {{ $paginatedDailyLogs->links() }}
                                 </div>
