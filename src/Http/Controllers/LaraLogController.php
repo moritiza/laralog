@@ -43,7 +43,7 @@ class LaraLogController extends Controller
             $paginatedSingleLogs->setPath($request->url());
         } else {
             $currentPage = LengthAwarePaginator::resolveCurrentPage();
-            $logsCollection = collect($this->dailyLogs[$logQuery]);
+            $logsCollection = collect($dailyLogs[$logQuery]);
             $perPage = 5;
             $currentPageItems = $logsCollection->slice(($currentPage * $perPage) - $perPage, $perPage)->all();
             $paginatedDailyLogs = new LengthAwarePaginator($currentPageItems , count($logsCollection), $perPage);
