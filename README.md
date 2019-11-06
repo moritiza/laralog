@@ -1,8 +1,9 @@
 # laralog
 Simple Log Viewer for Laravel
 
+[![Packagist](https://img.shields.io/packagist/v/moritiza/laralog.svg)](https://packagist.org/packages/moritiza/laralog)
+
 # Install
----------
 Install via composer
 ```
 composer require moritiza/laralog
