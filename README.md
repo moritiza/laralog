@@ -17,10 +17,10 @@ Install via composer
 ```shell
 composer require moritiza/laralog
 ```
-### Add Service Provider
+## Add Service Provider
 Add ```MoriTiza\LaraLog``` service provider to `config/app.php` in `providers` section
 ```php
 MoriTiza\LaraLog\LaraLogServiceProvider::class,
 ```
-
-Go to `http://myapp/logs` :wink:
+## Dive into :wink:
+Go to `http://myapp/logs`
