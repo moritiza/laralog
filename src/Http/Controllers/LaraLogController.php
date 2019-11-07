@@ -28,7 +28,7 @@ class LaraLogController extends Controller
 
         $logQuery = $request->input('log');
 
-        if (isset($logQuery) && (! is_null($logQuery)) && array_key_exists($logQuery, $this->dailyLogs)) {
+        if (isset($logQuery) && (!is_null($logQuery)) && array_key_exists($logQuery, $this->dailyLogs)) {
             $currentLog = $logQuery;
         } elseif (file_exists(storage_path('logs/laravel.log'))) {
             $currentLog = 'laravel';
@@ -43,21 +43,21 @@ class LaraLogController extends Controller
             $logsCollection = collect($singleLogs);
             $perPage = 5;
             $currentPageItems = $logsCollection->slice(($currentPage * $perPage) - $perPage, $perPage)->all();
-            $paginatedSingleLogs = new LengthAwarePaginator($currentPageItems , count($logsCollection), $perPage);
+            $paginatedSingleLogs = new LengthAwarePaginator($currentPageItems, count($logsCollection), $perPage);
             $paginatedSingleLogs->setPath($request->url());
-        } elseif (isset($logQuery) && (! is_null($logQuery)) && array_key_exists($logQuery, $this->dailyLogs)) {
+        } elseif (isset($logQuery) && (!is_null($logQuery)) && array_key_exists($logQuery, $this->dailyLogs)) {
             $currentPage = LengthAwarePaginator::resolveCurrentPage();
             $logsCollection = collect(array_reverse($dailyLogs[$logQuery]));
             $perPage = 5;
             $currentPageItems = $logsCollection->slice(($currentPage * $perPage) - $perPage, $perPage)->all();
-            $paginatedDailyLogs = new LengthAwarePaginator($currentPageItems , count($logsCollection), $perPage);
+            $paginatedDailyLogs = new LengthAwarePaginator($currentPageItems, count($logsCollection), $perPage);
             $paginatedDailyLogs->setPath('logs?log=' . $currentLog);
         } elseif (count($dailyLogs) > 0) {
             $currentPage = LengthAwarePaginator::resolveCurrentPage();
             $logsCollection = collect(array_reverse($dailyLogs[$currentLog]));
             $perPage = 5;
             $currentPageItems = $logsCollection->slice(($currentPage * $perPage) - $perPage, $perPage)->all();
-            $paginatedDailyLogs = new LengthAwarePaginator($currentPageItems , count($logsCollection), $perPage);
+            $paginatedDailyLogs = new LengthAwarePaginator($currentPageItems, count($logsCollection), $perPage);
             $paginatedDailyLogs->setPath('logs?log=' . $currentLog);
         }
 
