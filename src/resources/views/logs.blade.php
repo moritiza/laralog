@@ -180,7 +180,7 @@
                                 @php $counter['critical'] += 1 @endphp
                             @endif
                         @endforeach
-                    @else
+                    @elseif ($currentLog !== null)
                         @foreach ($dailyLogs[$currentLog] as $log => $content)
                             @php preg_match('/(DEBUG|INFO|NOTICE|WARNING|ERROR|CRITICAL|ALERT|EMERGENCY)/', $content, $matches) @endphp
 
@@ -281,7 +281,7 @@
                                                 @endforeach
                                             </tbody>
 
-                                        @else
+                                        @elseif ($currentLog !== null)
                                             <tbody>
                                                 @php $i = 1 @endphp
                                                 @foreach ($paginatedDailyLogs as $log => $content)
