@@ -233,6 +233,9 @@
                             </span>
                             </div>
                             <div class="card-body">
+                                @if ($currentLog === null)
+                                    <div class="alert alert-danger" role="alert">There is no log!</div>
+                                @endif
                                 <div class="table-responsive" @php if ($currentLog === null) echo 'style="display: none;"' @endphp>
                                     <table class="table table-striped">
                                         <thead>
