@@ -30,8 +30,10 @@ class LaraLogController extends Controller
 
         if (isset($logQuery) && (! is_null($logQuery)) && array_key_exists($logQuery, $this->dailyLogs)) {
             $currentLog = $logQuery;
-        } else {
+        } elseif (file_exists(storage_path('logs/laravel.log'))) {
             $currentLog = 'laravel';
+        } elseif (count($dailyLogs) > 0) {
+            $currentLog = array_key_first($dailyLogs);
         }
 
         if ($currentLog === 'laravel') {
