@@ -122,7 +122,7 @@
 
                         </div>
 
-                        <div class="card mt-3">
+                        <div class="card mt-3" @php if ($currentLog === null) echo 'style="display: none;"' @endphp>
                             <ul class="list-group list-group-flush logs-menu">
                                 @if (count($singleLogs) > 0)
                                     @if ($currentLog === 'laravel')
