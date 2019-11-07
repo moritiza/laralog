@@ -1,5 +1,6 @@
 # laralog
-Simple Log Viewer for Laravel
+### Simple Log Viewer for Laravel
+Developed with :heart: for developers
 
 [![Packagist](https://img.shields.io/packagist/v/moritiza/laralog.svg)](https://packagist.org/packages/moritiza/laralog)
 [![Packagist](https://img.shields.io/packagist/l/moritiza/laralog.svg)](https://packagist.org/packages/moritiza/laralog)
