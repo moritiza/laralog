@@ -9,6 +9,8 @@ Simple Log Viewer for Laravel
 [![Build Status](https://scrutinizer-ci.com/g/mortezanasiri/laralog/badges/build.png?b=master)](https://scrutinizer-ci.com/g/rap2hpoutre/laravel-log-viewer/build-status/master)
 [![Author](https://img.shields.io/badge/author-@mortezanasiri-blue.svg)](https://mortezanasiri.github.io)
 
+![MoriTiza/LaraLog](https://github.com/mortezanasiri/laralog/blob/master/MoriTiza-LaraLog.png?raw=true)
+
 ## Install
 Install via composer
 ```shell
