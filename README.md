@@ -23,4 +23,4 @@ Add ```MoriTiza\LaraLog``` service provider to `config/app.php` in `providers` s
 MoriTiza\LaraLog\LaraLogServiceProvider::class,
 ```
 ## Dive into :wink:
-Go to `http://myapp/logs`
+No need to add route, Just go to `http://myapp/logs` and enjoy it! :heart_eyes:
