@@ -7,7 +7,7 @@ Simple Log Viewer for Laravel
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/eab4d8855fb14806ba9ce412ce5ceedc)](https://www.codacy.com/manual/mortezanasiri/laralog?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mortezanasiri/laralog&amp;utm_campaign=Badge_Grade)
 [![Author](https://img.shields.io/badge/author-@mortezanasiri-blue.svg)](https://mortezanasiri.github.io)
 
-#2 Install
+## Install
 Install via composer
 ```shell
 composer require moritiza/laralog
