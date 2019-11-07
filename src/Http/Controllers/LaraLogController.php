@@ -116,7 +116,7 @@ class LaraLogController extends Controller
             if ($value === trim('[stacktrace]') || $value === trim('"}') || trim($value) == null || preg_match('/^#[0-9]+[\' \']/', $value) || preg_match('/^\[previous exception\] \[object\]/', $value)) {
                 unset($this->singleLogs[$key]);
             }
-       }
+        }
     }
 
     private function deleteAdditionalDailyLogs($dailyLogs)
