@@ -30,10 +30,12 @@ class LaraLogController extends Controller
 
         if (isset($logQuery) && (! is_null($logQuery)) && array_key_exists($logQuery, $this->dailyLogs)) {
             $currentLog = $logQuery;
-        } elseif (file_exists(storage_path('logs/laravel.log'))) {
+        } elseif (file_exists(storage_path('logs/laravel.log'))) { // me
             $currentLog = 'laravel';
-        } elseif (count($dailyLogs) > 0) {
-            $currentLog = array_key_first($dailyLogs);
+        } elseif (count($dailyLogs) > 0) { // me
+            $currentLog = array_key_first($dailyLogs); //me
+        } else {
+            $currentLog = null;
         }
 
         if ($currentLog === 'laravel') {
@@ -43,14 +45,14 @@ class LaraLogController extends Controller
             $currentPageItems = $logsCollection->slice(($currentPage * $perPage) - $perPage, $perPage)->all();
             $paginatedSingleLogs = new LengthAwarePaginator($currentPageItems , count($logsCollection), $perPage);
             $paginatedSingleLogs->setPath($request->url());
-        } elseif (isset($logQuery) && (! is_null($logQuery))) {
+        } elseif (isset($logQuery) && (! is_null($logQuery)) && array_key_exists($logQuery, $this->dailyLogs)) {
             $currentPage = LengthAwarePaginator::resolveCurrentPage();
             $logsCollection = collect(array_reverse($dailyLogs[$logQuery]));
             $perPage = 5;
             $currentPageItems = $logsCollection->slice(($currentPage * $perPage) - $perPage, $perPage)->all();
             $paginatedDailyLogs = new LengthAwarePaginator($currentPageItems , count($logsCollection), $perPage);
             $paginatedDailyLogs->setPath('logs?log=' . $currentLog);
-        } else {
+        } elseif (count($dailyLogs) > 0) {
             $currentPage = LengthAwarePaginator::resolveCurrentPage();
             $logsCollection = collect(array_reverse($dailyLogs[$currentLog]));
             $perPage = 5;
